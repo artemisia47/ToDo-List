@@ -1,8 +1,11 @@
 import "./styles.css"; // ✅ Import the CSS file for Webpack
 
+console.log("Script loaded");
+
 document.addEventListener("DOMContentLoaded", () => {
     const addProjectBtn = document.getElementById("addProjectBtn");
     const projectList = document.getElementById("projectList");
+    console.log("Hello from index.js");
     const todoContainer = document.getElementById("todoContainer");
 
     let projects = JSON.parse(localStorage.getItem("projects")) || [];
