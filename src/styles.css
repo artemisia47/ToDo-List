@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* flex-wrap: wrap; Allows items to wrap on smaller screens */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive Sidebar (Collapses on Mobile) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%; /* Full width on small screens */
+}
+
+/* Project List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #333;
+    padding: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Delete Project Button */
+.delete-project {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 20%;
+}
+
+.delete-project:hover {
+    background: darkred;
+}
+
+/* Action Buttons */
+.green-tick, .delete-todo {
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+.green-tick {
+    color: green;
+}
+
+.delete-todo {
+    color: red;
+}
+
+/* Main Content */
+.todo-container {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    width: 100%;
+}
+
+/* To-Do Table */
+.todo-table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+/* Table Styling */
+.todo-table th, .todo-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Completed To-Do */
+.completed {
+    background-color: lightgreen;
+}
+
+/* To-Do Form */
+#todoFormContainer {
+    margin-top: 10px;
+    padding: 15px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Adjust input fields for better responsiveness */
+#todoFormContainer input, 
+#todoFormContainer select, 
+#todoFormContainer button {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Hide form when needed */
+.hidden {
+    display: none;
+}
+
+/* 📌 Mobile Optimization */
+@media (max-width: 768px) {
+    .todo-container {
+        padding: 10px;
+    }
+
+    .todo-table {
+        width: 100%;
+        font-size: 14px; /* Reduce font size */
+    }
+
+    #todoFormContainer {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #todoFormContainer input, 
+    #todoFormContainer select, 
+    #todoFormContainer button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-table th, .todo-table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
